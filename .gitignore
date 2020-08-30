@@ -1,0 +1,5 @@
+*__pycache__
+datasets/cmdd/
+datasets/icdar13table/
+!datasets/cmdd/prepare.py
+!datasets/icdar13table/prepare.py
