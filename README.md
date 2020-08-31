@@ -12,7 +12,7 @@ Tables often represent densely packed but structured data. Understanding table s
 - The RoI_pool is replace by the RoI_align.
 # Getting Started
 ## Requirements
-Create the environment from the environment.yml file `conda env create --file environment.yaml` or install the software needed in your environment independently.
+Create the environment from the environment.yml file `conda env create --file environment.yml` or install the software needed in your environment independently.
 ```
 dependencies:
   - python=3.7
