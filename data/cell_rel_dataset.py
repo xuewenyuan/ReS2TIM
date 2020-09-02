@@ -106,7 +106,7 @@ class CellRelDataset(BaseDataset):
                 split = dict()
                 split['tb_name'] = os.path.split(table_pkl)[1].replace('.pkl','')
                 split['img_path'] = tb_dict['image_path']
-                split['bboxes'] = nodes[:,[3,4,7,8]].astype(np.float64)
+                split['bboxes'] = nodes[:,[2,3,6,7]].astype(np.float64)
                 split['edges'] = edges[count:min(count+pair_batch,edges.shape[0]), 1:3]
                 split['weights'] = edges[count:min(count+pair_batch,edges.shape[0]), 3]
                 split['rels'] = edges[count:min(count+pair_batch,edges.shape[0]), 4]
