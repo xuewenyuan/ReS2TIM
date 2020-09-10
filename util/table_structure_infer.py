@@ -138,6 +138,7 @@ def depth(cells_adj, start_list, dir_ind, ifhorizontal=False):
             for cell in lev:
                 next_lev = set([])
                 for ncell in cells_adj[cell][dir_ind]:
+                    if sum([1 if ncell in lev_i else 0 for lev_i in levs]) != 0: continue
                     next_lev.add(ncell)
 
                 if ifhorizontal:
