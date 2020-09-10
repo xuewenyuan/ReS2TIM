@@ -73,7 +73,7 @@ cp ./checkpoints/cmdd/best_net_Res2Tim.pth ./checkpoints/icdar13table/best_net_R
 # train on the icdar13table dataset based on the CMDD pretrained model
 python train.py --dataroot ./datasets/icdar13table --gpu_ids 2 --model res2tim --dataset_mode cell_rel --lr 0.0005 --pair_batch 10000 --niter 5 --niter_decay 95 --use_mask --name res2tim_icdar13table --continue_train --epoch prt
 ```
-2. Evaluation for neighbor relationship detection and cell location inference. Use your training models, or download our pretrained models and put them under './checkpoints/res2tim_cmdd/' and './checkpoints/res2tim_icdar13table/', respectively. CMDD pretrained model: [Google Drive](https://drive.google.com/file/d/1fEE-05_EAzbbRnlF6mMbxhFH9kjgnkeZ/view?usp=sharing), [百度网盘(b7pt)](https://pan.baidu.com/s/1M32SW4fwAHz6yV9fpXsMTQ). ICDAR13Table pretrained model: [Google Drive](https://drive.google.com/file/d/1uWzFy8KpeTPObqT-HAiD8o6S7NZsVq2e/view?usp=sharing), [百度网盘(rmp8)](https://pan.baidu.com/s/1_sMddbJE1QbSMvI7gw6Jkw).
+2. Evaluation for neighbor relationship detection and cell location inference. Use your training models, or download our pretrained models and put them under './checkpoints/res2tim_cmdd/' and './checkpoints/res2tim_icdar13table/', respectively. CMDD pretrained model: [Google Drive](https://drive.google.com/file/d/1fEE-05_EAzbbRnlF6mMbxhFH9kjgnkeZ/view?usp=sharing), [百度网盘(b7pt)](https://pan.baidu.com/s/1M32SW4fwAHz6yV9fpXsMTQ). ICDAR13Table pretrained model: [Google Drive](https://drive.google.com/file/d/1fRdt4eEvVFqXVXM5mG_MJc4wVHmB_beE/view?usp=sharing), [百度网盘(2grp)](https://pan.baidu.com/s/1ImA_WKw27RuSAo369ic8FQ).
 ```
 # CMDD 
 python test.py --dataroot ./datasets/cmdd --gpu_ids 5 --model res2tim --dataset_mode cell_rel --pair_batch 10000 --use_mask --name res2tim_cmdd --epoch best
@@ -111,8 +111,8 @@ python test.py --dataroot ./datasets/icdar13table --gpu_ids 5 --model res2tim --
         <td>This implementation</td>
         <td>0.999</td>
         <td>0.996</td>
-        <td>0.811</td>
-        <td>0.771</td>
+        <td>0.866</td>
+        <td>0.841</td>
     <tr>
 </table>
 2. Results of cell location inference
@@ -168,11 +168,11 @@ python test.py --dataroot ./datasets/icdar13table --gpu_ids 5 --model res2tim --
     <tr>
     <tr>
         <td>This implementation</td>
-        <td>0.053</td>
-        <td>0.167</td>
-        <td>0.127</td>
-        <td>0.430</td>
-        <td>0.364</td>
+        <td>0.174</td>
+        <td>0.306</td>
+        <td>0.264</td>
+        <td>0.576</td>
+        <td>0.492</td>
     <tr>
 </table>
 
